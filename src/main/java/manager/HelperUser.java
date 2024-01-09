@@ -3,9 +3,10 @@ package manager;
 import models.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class HelperUser extends HelperBase{
+
+    //---------------login------------------
 
     public HelperUser(WebDriver wd) {
         super(wd);
@@ -48,5 +49,17 @@ public class HelperUser extends HelperBase{
 
     public void logout() {
         click(By.xpath("//*[text()='Sign Out']"));
+    }
+
+
+
+    //--------------registration----------------------
+
+    public void submitRegistration() {
+        click(By.name("registration"));
+    }
+
+    public boolean isRegistered() {
+        return isElementPresent((By.xpath("//*[text()=' No Contacts here!']")));
     }
 }
