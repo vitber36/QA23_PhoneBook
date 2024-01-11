@@ -58,7 +58,7 @@ public class RegistrationTests extends TestBase{
 
     @Test(description = "Bug report #23456 Fixed")
     public void registrationExistsUser(){
-        User user=new User().withEmail("vitber06mail.ru").withPassword("1978Vit@lik");
+        User user=new User().withEmail("vitber06@mail.ru").withPassword("1978Vit@lik");
 
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm(user);
