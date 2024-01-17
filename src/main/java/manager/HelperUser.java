@@ -70,4 +70,12 @@ public class HelperUser extends HelperBase{
         //return isElementPresent((By.xpath("//*[text()=' No Contacts here!']")));
 
     }
+
+    public void login(User user) {
+        openLoginRegistrationForm();
+        fillLoginRegistrationForm(user);
+        submitLogin();
+
+    }
+
 }
