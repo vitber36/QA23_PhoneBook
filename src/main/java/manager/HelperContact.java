@@ -54,4 +54,16 @@ public class HelperContact extends HelperBase{
         return isElementPresent(By.cssSelector("a.active[href='/add']"));
     }
 
+    public void provideContacts(Contact contact) {
+        List<WebElement>list=wd.findElements(By.cssSelector("h3"));
+        if(list.size()<3){
+            for (int i=0;i<3;i++){
+                openContactForm();
+                fillContactForm(contact);
+                saveContact();
+            }
+        }
+    }
+
+
 }

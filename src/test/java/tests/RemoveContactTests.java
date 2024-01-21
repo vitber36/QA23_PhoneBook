@@ -9,9 +9,9 @@ public class RemoveContactTests extends TestBase{
     @BeforeMethod
     public void preCondition(){
         if(!app.getHelperUser().isLogged()){
-            app.getHelperUser().login(new User().withEmail("vitber06@mail.ru").withPassword("1978Vit@lik"));
+            app.getHelperUser().login(new User().withEmail("vitber06@mail.ru").withPassword("1978Vit@lik"))
         }
-        //app.getHelperContact().provideContacts();//if list<3 ===> add 3 contacts
+        app.getHelperContact().provideContacts();//if list<3 ===> add 3 contacts
     }
     @Test
     public void removeFirstContact(){
