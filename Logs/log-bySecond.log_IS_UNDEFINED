@@ -1,0 +1,68 @@
+18:57:28.776 INFO  tests.TestBase - Start
+18:57:30.353 INFO  tests.TestBase - End
+19:23:13.449 INFO  manager.ApplicationManager - All tests run in Chrome 
+19:23:14.529 INFO  manager.ApplicationManager - The link--->https://telranedu.web.app/home
+19:23:14.589 INFO  tests.TestBase - Name of method--->loginSuccess1
+19:23:55.013 INFO  manager.ApplicationManager - All tests run in Chrome 
+19:23:56.098 INFO  manager.ApplicationManager - The link--->https://telranedu.web.app/home
+19:23:56.147 INFO  tests.TestBase - Name of method--->loginSuccess
+19:24:01.227 INFO  tests.TestBase - Start test with name 'login success'
+19:24:01.227 INFO  tests.TestBase - Test data--> email:'vitber06@mail.ru' & password: '1978Vit@lik'
+19:24:02.798 INFO  tests.TestBase - Assert check is element button 'sing out' present
+19:24:02.805 INFO  tests.TestBase - Name of method--->loginSuccess1
+19:24:02.901 INFO  tests.TestBase - Before method finish logout
+19:24:03.727 INFO  tests.TestBase - Name of method--->loginSuccessModel
+19:24:03.808 INFO  tests.TestBase - Before method finish logout
+19:24:03.809 INFO  tests.TestBase - Test data--> email:'vitber06@mail.ru' & password: '1978Vit@lik'
+19:24:04.623 INFO  tests.TestBase - Assert check is element button 'sing out' present
+19:24:04.625 INFO  tests.TestBase - Name of method--->loginUnregistrationUser
+19:24:04.707 INFO  tests.TestBase - Before method finish logout
+19:24:04.709 INFO  tests.TestBase - Test data--> email:'vvitber06@mail.ru' & password: '11978Vit@lik'
+19:24:16.073 INFO  tests.TestBase - Name of method--->loginWrongEmail
+19:24:21.114 INFO  tests.TestBase - Test data--> email:'vitber06mail.ru' & password: '1978Vit@lik'
+19:24:22.744 INFO  tests.TestBase - Assert check is alert present with error text 'Wrong email or password'
+19:24:22.747 INFO  tests.TestBase - Name of method--->loginWrongPassword
+19:24:27.811 INFO  tests.TestBase - Test data--> email:'vitber06@mail.ru' & password: '1978it@lik'
+19:43:53.400 INFO  manager.ApplicationManager - All tests run in Chrome 
+19:43:54.481 INFO  manager.ApplicationManager - The link--->https://telranedu.web.app/home
+19:43:54.536 INFO  tests.TestBase - Name of method--->loginSuccess
+19:43:59.615 INFO  tests.TestBase - Start test with name 'login success'
+19:43:59.616 INFO  tests.TestBase - Test data--> email:'vitber06@mail.ru' & password: '1978Vit@lik'
+19:44:01.215 INFO  tests.TestBase - Assert check is element button 'sing out' present
+19:44:01.219 INFO  tests.TestBase - Name of method--->loginSuccess1
+19:44:01.323 INFO  tests.TestBase - Before method finish logout
+19:44:02.141 INFO  tests.TestBase - Name of method--->loginSuccessModel
+19:44:02.206 INFO  tests.TestBase - Before method finish logout
+19:44:02.208 INFO  tests.TestBase - Test data--> email:'vitber06@mail.ru' & password: '1978Vit@lik'
+19:44:02.986 INFO  tests.TestBase - Assert check is element button 'sing out' present
+19:44:02.987 INFO  tests.TestBase - Name of method--->loginUnregistrationUser
+19:44:03.070 INFO  tests.TestBase - Before method finish logout
+19:44:03.071 INFO  tests.TestBase - Test data--> email:'vvitber06@mail.ru' & password: '11978Vit@lik'
+19:44:14.429 INFO  tests.TestBase - Name of method--->loginWrongEmail
+19:44:19.490 INFO  tests.TestBase - Test data--> email:'vitber06mail.ru' & password: '1978Vit@lik'
+19:44:21.057 INFO  tests.TestBase - Assert check is alert present with error text 'Wrong email or password'
+19:44:21.059 INFO  tests.TestBase - Name of method--->loginWrongPassword
+19:44:26.128 INFO  tests.TestBase - Test data--> email:'vitber06@mail.ru' & password: '1978it@lik'
+19:44:27.197 INFO  tests.TestBase - Assert check is alert present with error text 'Wrong email or password'
+20:03:35.273 INFO  manager.ApplicationManager - All tests run in Chrome 
+20:03:36.108 INFO  manager.ApplicationManager - The link--->https://telranedu.web.app/home
+20:03:36.156 INFO  tests.TestBase - Name of method--->removeFirstContact
+20:03:43.220 INFO  manager.HelperBase - Number of contacts before remove is--->83
+20:03:43.900 INFO  manager.HelperBase - Number of contacts after remove is--->83
+20:06:35.988 INFO  manager.ApplicationManager - All tests run in Chrome 
+20:06:37.091 INFO  manager.ApplicationManager - The link--->https://telranedu.web.app/home
+20:06:37.135 INFO  tests.TestBase - Name of method--->removeFirstContact
+20:06:44.252 INFO  manager.HelperBase - Number of contacts before remove is--->82
+20:06:45.927 INFO  manager.HelperBase - Number of contacts after remove is--->81
+20:25:13.229 INFO  manager.ApplicationManager - All tests run in Chrome 
+20:25:14.253 INFO  manager.ApplicationManager - The link--->https://telranedu.web.app/home
+20:25:14.304 INFO  tests.TestBase - Name of method--->removeAllContacts
+20:35:35.780 INFO  manager.ApplicationManager - All tests run in Chrome 
+20:35:36.558 INFO  manager.ApplicationManager - The link--->https://telranedu.web.app/home
+20:35:36.643 INFO  tests.TestBase - Name of method--->removeAllContacts
+20:37:38.726 INFO  manager.ApplicationManager - All tests run in Chrome 
+20:37:39.498 INFO  manager.ApplicationManager - The link--->https://telranedu.web.app/home
+20:37:39.561 INFO  tests.TestBase - Name of method--->removeAllContacts
+20:38:06.844 INFO  tests.TestBase - Name of method--->removeFirstContact
+20:38:20.332 INFO  manager.HelperBase - Number of contacts before remove is--->3
+20:38:22.011 INFO  manager.HelperBase - Number of contacts after remove is--->2

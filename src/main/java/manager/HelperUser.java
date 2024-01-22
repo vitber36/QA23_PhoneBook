@@ -62,14 +62,7 @@ public class HelperUser extends HelperBase{
         click(By.name("registration"));
     }
 
-    public boolean isRegistered() {
-        WebDriverWait wait=new WebDriverWait(wd,5);
-        return wait.until(ExpectedConditions.textToBePresentInElement
-                (wd.findElement(By.cssSelector(".contact-page_message__2qafk>h1")),
-                        "No Contacts here!"));
-        //return isElementPresent((By.xpath("//*[text()=' No Contacts here!']")));
 
-    }
 
     public void login(User user) {
         openLoginRegistrationForm();
