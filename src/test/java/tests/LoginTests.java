@@ -11,6 +11,7 @@ public class LoginTests extends TestBase{
     public void preCondition(){
         if(app.getHelperUser().isLogged()){
             app.getHelperUser().logout();
+
             logger.info("Before method finish logout");
         }
 
@@ -20,6 +21,7 @@ public class LoginTests extends TestBase{
     public void loginSuccess(){
         logger.info("Start test with name 'login success'");
         logger.info("Test data--> email:'vitber06@mail.ru' & password: '1978Vit@lik'");
+
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm("vitber06@mail.ru","1978Vit@lik");
         app.getHelperUser().submitLogin();
@@ -47,6 +49,7 @@ public class LoginTests extends TestBase{
     @Test
     public void loginSuccessModel() {
         logger.info("Test data--> email:'vitber06@mail.ru' & password: '1978Vit@lik'");
+
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm("vitber06@mail.ru", "1978Vit@lik");
         app.getHelperUser().submitLogin();
@@ -57,6 +60,7 @@ public class LoginTests extends TestBase{
     @Test
     public void loginWrongEmail(){
         logger.info("Test data--> email:'vitber06mail.ru' & password: '1978Vit@lik'");
+
         app.getHelperUser().openLoginRegistrationForm();
         app.getHelperUser().fillLoginRegistrationForm("vitber06mail.ru", "1978Vit@lik");
         app.getHelperUser().submitLogin();
