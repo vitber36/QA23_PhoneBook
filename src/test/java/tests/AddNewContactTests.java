@@ -1,9 +1,11 @@
 package tests;
 
+import manager.DataProviderContacts;
 import models.Contact;
 import models.User;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import java.util.Random;
 
@@ -19,22 +21,21 @@ public class AddNewContactTests extends TestBase {
 
     }
 
-    @Test
-    public void addContactSuccessAll() {
+    @Test(dataProvider ="contactSuccess",dataProviderClass = DataProviderContacts.class)
+    public void addContactSuccessAll(Contact contact) {
 
-        logger.info("Add contact with test data---> name-'zz+i', last name-'aa', phone-'1555555555'," +
-                "email-'zz+i+@mail.ru',address-'aa',description-'all'");
+        logger.info("Add contact with test data---> "+contact.toString());
 
         int i = new Random().nextInt(1000);
 
-        Contact contact = Contact.builder()
-                .name("zz" + i)
-                .lastName("aa")
-                .phone("1555555555" + i)
-                .email("zz" + i + "@mail.ru")
-                .address("aa")
-                .description("all")
-                .build();
+//        Contact contact = Contact.builder()
+//                .name("zz" + i)
+//                .lastName("aa")
+//                .phone("1555555555" + i)
+//                .email("zz" + i + "@mail.ru")
+//                .address("aa")
+//                .description("all")
+//                .build();
 
         app.getHelperContact().openContactForm();
         app.getHelperContact().fillContactForm(contact);

@@ -1,9 +1,15 @@
 package tests;
 
+import manager.DataProviderUser;
 import models.User;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class LoginTests extends TestBase{
 
@@ -14,16 +20,15 @@ public class LoginTests extends TestBase{
 
             logger.info("Before method finish logout");
         }
-
     }
 
-    @Test
-    public void loginSuccess(){
+    @Test(dataProvider="loginDate",dataProviderClass = DataProviderUser.class)
+    public void loginSuccess(String email,String password){
         logger.info("Start test with name 'login success'");
-        logger.info("Test data--> email:'vitber06@mail.ru' & password: '1978Vit@lik'");
+        logger.info("Test data--> email: "+email+ "& password:" +password);
 
         app.getHelperUser().openLoginRegistrationForm();
-        app.getHelperUser().fillLoginRegistrationForm("vitber06@mail.ru","1978Vit@lik");
+        app.getHelperUser().fillLoginRegistrationForm(email,password);
         app.getHelperUser().submitLogin();
 
         //Assert.assertEquals();
@@ -36,6 +41,7 @@ public class LoginTests extends TestBase{
 
     }
 
+
     @Test
     public void loginSuccess1(){
         User user=new User().withEmail("vitber06@mail.ru").withPassword("1978Vit@lik");
@@ -46,17 +52,19 @@ public class LoginTests extends TestBase{
         Assert.assertTrue(app.getHelperUser().isLogged());
 
     }
-    @Test
-    public void loginSuccessModel() {
-        logger.info("Test data--> email:'vitber06@mail.ru' & password: '1978Vit@lik'");
+    @Test(dataProvider = "loginModel",dataProviderClass=DataProviderUser.class)
+    public void loginSuccessModel(User user) {
+        logger.info("Test data--> "+user.toString());
 
         app.getHelperUser().openLoginRegistrationForm();
-        app.getHelperUser().fillLoginRegistrationForm("vitber06@mail.ru", "1978Vit@lik");
+        app.getHelperUser().fillLoginRegistrationForm(user);
         app.getHelperUser().submitLogin();
         Assert.assertTrue(app.getHelperUser().isLogged());
 
         logger.info("Assert check is element button 'sing out' present");
     }
+
+
     @Test
     public void loginWrongEmail(){
         logger.info("Test data--> email:'vitber06mail.ru' & password: '1978Vit@lik'");
