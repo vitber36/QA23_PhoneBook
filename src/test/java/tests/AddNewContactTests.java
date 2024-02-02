@@ -21,7 +21,7 @@ public class AddNewContactTests extends TestBase {
 
     }
 
-    @Test(dataProvider ="contactSuccess",dataProviderClass = DataProviderContacts.class)
+    @Test(dataProvider ="contactCSV",dataProviderClass = DataProviderContacts.class)
     public void addContactSuccessAll(Contact contact) {
 
         logger.info("Add contact with test data---> "+contact.toString());
@@ -143,19 +143,18 @@ public class AddNewContactTests extends TestBase {
         logger.info("assert message contains text 'Wrong lastName'");
     }
 
-    @Test
-    public void addNewContactWrongPhone(){
-        logger.info("Add contact with test data---> name-'zz', last name-'aa', phone-''," +
-                "email-'zz+i+@mail.ru',address-'aa',description-'empty phone'");
+    @Test(dataProvider = "contactWrongPhone",dataProviderClass = DataProviderContacts.class)
+    public void addNewContactWrongPhone(Contact contact){
+        logger.info("Add contact with test data---> "+contact.toString());
 
-        Contact contact = Contact.builder()
-                .name("zz")
-                .lastName("aa")
-                .phone("")
-                .email("zz@mail.ru")
-                .address("aa")
-                .description("empty phone")
-                .build();
+//        Contact contact = Contact.builder()
+//                .name("zz")
+//                .lastName("aa")
+//                .phone("")
+//                .email("zz@mail.ru")
+//                .address("aa")
+//                .description("empty phone")
+//                .build();
 
         app.getHelperContact().openContactForm();
         app.getHelperContact().fillContactForm(contact);
