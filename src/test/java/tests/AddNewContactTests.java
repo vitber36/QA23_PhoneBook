@@ -13,7 +13,7 @@ public class AddNewContactTests extends TestBase {
 
     //int i=(int)(System.currentTimeMillis())/1000%3600;
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void preCondition() {
         if (!app.getHelperUser().isLogged()) {
             app.getHelperUser().login(new User().withEmail("vitber06@mail.ru").withPassword("1978Vit@lik"));
@@ -48,7 +48,7 @@ public class AddNewContactTests extends TestBase {
         logger.info("assert the contact is add");
     }
 
-    @Test
+    @Test(groups = {"smoke","regress","retest"})
     public void addContactSuccessRequiredFields() {
 
         logger.info("Add contact with test data---> name-'zz+i', last name-'aa', phone-'1555555555'," +
