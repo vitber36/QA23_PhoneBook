@@ -18,7 +18,7 @@ public class AddNewContactTests extends TestBase {
         if (!app.getHelperUser().isLogged()) {
             app.getHelperUser().login(new User().withEmail("vitber06@mail.ru").withPassword("1978Vit@lik"));
         }
-
+//for jenkins
     }
 
     @Test(dataProvider ="contactCSV",dataProviderClass = DataProviderContacts.class)
