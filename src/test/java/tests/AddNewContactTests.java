@@ -16,7 +16,7 @@ public class AddNewContactTests extends TestBase {
     @BeforeClass(alwaysRun = true)
     public void preCondition() {
         if (!app.getHelperUser().isLogged()) {
-            app.getHelperUser().login(new User().withEmail("vitber06@mail.ru").withPassword("1978Vit@lik"));
+            app.getHelperUser().login(new User().withEmail("vitber36@gmail.com").withPassword("1978Vit@lik"));
         }
 //for jenkins
     }
